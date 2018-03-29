@@ -29,14 +29,15 @@ gulp.task("generate:docs", function () {
 
 
 // get the dios files from the cache folder
-gulp.task("get:docs", function () {
-  console.log(`GET DOCS ASSETS FROM ${cache}/docs`);
-  gulp.src(cache + "/docs/**/*")
-    .pipe(gulp.dest(buildDest + "/docs"));
-});
+// gulp.task("get:docs", function () {
+//   console.log(`GET DOCS ASSETS FROM ${cache}/docs`);
+//   gulp.src(cache + "/docs/**/*")
+//     .pipe(gulp.dest(buildDest + "/docs"));
+// });
 
 
 
-gulp.task('stash', shell.task(`cp -R ${buildDest}/docs ${cache}/docs`));
+gulp.task('stash:docs', shell.task(`cp -R ${buildDest}/docs ${cache}/docs`));
+gulp.task('fetch:docs', shell.task(`cp -R ${cache}/docs ${buildDest}/docs`));
 gulp.task('list', shell.task(`ls -R ${cache}`));
 

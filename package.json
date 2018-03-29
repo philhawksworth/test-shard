@@ -10,6 +10,6 @@
   },
   "scripts" : {
     "build:docs": "gulp generate:docs && gulp stash && gulp list",
-    "get:docs": "gulp list && gulp get:docs"
+    "get:docs": "gulp list && gulp fetch:docs"
   }
 }
