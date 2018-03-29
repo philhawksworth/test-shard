@@ -9,7 +9,7 @@ var shell       = require('gulp-shell');
 var buildSrc = "src";
 var buildDest = "dist";
 var localCache = "cache";
-var prodCache = " /opt/build/cache/";
+var prodCache = " /opt/build/cache/test-shard";
 var cache;
 
 // automatically set the correct path for our cache manipulations
