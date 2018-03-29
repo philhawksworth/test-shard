@@ -1,0 +1,14 @@
+{
+  "name": "test-shard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Phil Hawksworth",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts" : {
+    "build:docs": "gulp generate:docs",
+    "get:docs": "gulp get:docs"
+  }
+}
