@@ -22,26 +22,21 @@ if(process.env.URL) {
 
 // put the dcs files into the cache and dist folder
 gulp.task("generate:docs", function () {
-
   console.log(`STASH DOCS ASSETS AT ${cache}/docs`);
-
   gulp.src(buildSrc + "/docs/**/*")
     .pipe(gulp.dest(buildDest + "/docs"))
-    // .pipe(gulp.dest(cache + "/docs"))
 });
 
 
 // get the dios files from the cache folder
 gulp.task("get:docs", function () {
-
   console.log(`GET DOCS ASSETS FROM ${cache}/docs`);
-
   gulp.src(cache + "/docs/**/*")
     .pipe(gulp.dest(buildDest + "/docs"));
 });
 
 
 
+gulp.task('stash', shell.task(`cp -R ${buildDest}/docs ${cache}/docs`));
 gulp.task('list', shell.task(`ls -R ${cache}`));
 
-gulp.task('stash', shell.task(`cp -R ${buildDest}/docs ${cache}`));
