@@ -5,10 +5,11 @@
   "author": "Phil Hawksworth",
   "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.5"
   },
   "scripts" : {
-    "build:docs": "gulp generate:docs",
-    "get:docs": "gulp get:docs"
+    "build:docs": "gulp generate:docs && gulp list",
+    "get:docs": "gulp list && gulp get:docs"
   }
 }
