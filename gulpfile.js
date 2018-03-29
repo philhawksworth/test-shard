@@ -22,12 +22,18 @@ if(process.env.URL) {
 
 // Compile SCSS files to CSS
 gulp.task("generate:docs", function () {
+
+  console.log(`STASH DOCS ASSETS AT ${cache}`);
+
   gulp.src(buildSrc + "/docs/**/*")
     .pipe(gulp.dest(buildDest + "/docs"))
     .pipe(gulp.dest(cache + "/docs"))
 });
 
 gulp.task("get:docs", function () {
+
+  console.log(`GET DOCS ASSETS FROM ${cache}`);
+
   gulp.src(cache + "/docs/**/*")
     .pipe(gulp.dest(buildDest + "/docs"))
 });
