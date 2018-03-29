@@ -38,6 +38,6 @@ gulp.task("generate:docs", function () {
 
 
 gulp.task('stash:docs', shell.task(`cp -R ${buildDest}/docs ${cache}/docs`));
-gulp.task('fetch:docs', shell.task(`cp -R ${cache}/docs ${buildDest}/docs`));
+gulp.task('fetch:docs', shell.task(`mkdir -p ${buildDest} && cp -R ${cache}/docs ${buildDest}`));
 gulp.task('list', shell.task(`ls -R ${cache}`));
 
