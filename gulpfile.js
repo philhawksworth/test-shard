@@ -27,7 +27,7 @@ gulp.task("generate:docs", function () {
 
   gulp.src(buildSrc + "/docs/**/*")
     .pipe(gulp.dest(buildDest + "/docs"))
-    .pipe(gulp.dest(cache + "/docs"))
+    // .pipe(gulp.dest(cache + "/docs"))
 });
 
 
@@ -43,3 +43,5 @@ gulp.task("get:docs", function () {
 
 
 gulp.task('list', shell.task(`ls -R ${cache}`));
+
+gulp.task('stash', shell.task(`cp -R ${buildDest}/docs ${cache}`));

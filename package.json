@@ -9,7 +9,7 @@
     "gulp-shell": "^0.6.5"
   },
   "scripts" : {
-    "build:docs": "gulp generate:docs && gulp list",
+    "build:docs": "gulp generate:docs && gulp stash && gulp list",
     "get:docs": "gulp list && gulp get:docs"
   }
 }
