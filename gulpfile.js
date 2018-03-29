@@ -42,4 +42,4 @@ gulp.task("get:docs", function () {
 
 
 
-gulp.task('list', shell.task(`tree ${cache}`));
+gulp.task('list', shell.task(`ls -R ${cache}`));
